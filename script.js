@@ -13,3 +13,8 @@ function validarEmail() {
   }
 }
 botaoEntrar.addEventListener('click', validarEmail);
+
+const enviarBotao = document.querySelector('#submit-btn');
+console.log(enviarBotao);
+const checkBox = document.querySelector('#agreement');
+console.log(checkBox);
