@@ -32,3 +32,7 @@ form input {
 #house {
   width: 210px;
 }
+
+div {
+  display: flex;
+}
