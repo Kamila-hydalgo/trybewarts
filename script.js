@@ -26,3 +26,17 @@ checkBox.addEventListener('change', (event) => {
     enviarBotao.disabled = true;
   }
 }, false);
+
+// Requisito 20.
+// 1) Deve existir um contador com o ID "counter"
+// 2) O contador de caracteres deve ser atualizado conforme o conteúdo do textarea muda.
+// Referência: https://www.horadecodar.com.br/2020/12/09/contador-de-caracteres-em-uma-textarea-com-javascript/
+const textarea = document.querySelector('textarea');
+textarea.addEventListener('keypress', (e) => {
+  const maximoCaracteres = 500;
+  const caracteresTextarea = textarea.value.length;
+
+  if (caracteresTextarea >= maximoCaracteres) {
+    e.preventDefault();
+  }
+});
