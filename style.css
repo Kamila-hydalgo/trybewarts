@@ -11,6 +11,14 @@
   justify-content: space-between;
 }
 
+h1 {
+  padding-top: 15px;
+}
+
+h2 {
+  text-align: center;
+}
+
 .trybewarts-login {
   display: flex;
   align-items: center;
@@ -36,6 +44,10 @@ main , #parte1 , #parte3 {
   margin-top: 50px;
 }
 
+#parte1 {
+  flex-wrap: wrap;
+}
+
 #parte2 {
   width: 100%;
   flex-flow: column wrap;
@@ -51,15 +63,19 @@ main , #parte1 , #parte3 {
 
 #parte3 div {
   flex: 33%;
+  line-height: 20px;
 }
 
 #parte4 {
   display: flex;
   justify-content: space-between;
+  line-height: 20px;
 }
 
 #label-rate {
   flex-direction: row;
+  line-height: 20px;
+
 }
 
 #house {
@@ -100,21 +116,9 @@ main , #parte1 , #parte3 {
   align-self: center;
 }
 
-h2 {
-  text-align: center;
-}
-
-#parte1 {
-  flex-wrap: wrap;
-}
-
 footer {
   height: 40px;
   background-color: grey;
   text-align: center;
-  padding-top: 15px;
-}
-
-h1 {
   padding-top: 15px;
 }

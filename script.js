@@ -28,14 +28,17 @@ checkBox.addEventListener('change', (event) => {
 }, false);
 
 // Requisito 20.
-// 1) Deve existir um contador com o ID "counter" ok fiz uma div
+// 1) Deve existir um contador com o ID "counter" ok fiz um
 // 2) O contador de caracteres deve ser atualizado conforme o conteúdo do textarea muda.
 // Referência: https://www.horadecodar.com.br/2020/12/09/contador-de-caracteres-em-uma-textarea-com-javascript/
-const textarea = document.querySelector('textarea');
-textarea.addEventListener('keypress', (e) => {
+const textarea = document.querySelector('.textarea');
+const contador = document.querySelector('#counter');
+textarea.addEventListener('keypress', (e) => { // alteração para keypress - evento ocorre quando a tecla retorna à posição original no teclado (i.e. quando você solta a mesma).
   const maximoCaracteres = 500;
-  const caracteresTextarea = textarea.value.length;
+  const caracteresTextarea = textarea.length; // tirei o value, pois estava com erro e como nao pegamos o valor em si e somente o tamanho (caracteres) acredito que deveria ser só o lenght (nao deu erro com length kkk)
+  // const resultadoContador = maximoCaracteres - caracteresTextarea; - teriamos que colocar em outra funçao ou na mesma para mostrar na tela?
 
+  // contador.display(e);
   if (caracteresTextarea >= maximoCaracteres) {
     e.preventDefault();
   }
