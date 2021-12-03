@@ -32,7 +32,7 @@ main , #parte1 , #parte3 {
 #trybewarts-forms-logo {
   height: 500px;
   width: 400px;
-  margin-left: 200px;
+  margin-left: 100px;
   margin-top: 50px;
 }
 
@@ -51,6 +51,15 @@ main , #parte1 , #parte3 {
 
 #parte3 div {
   flex: 33%;
+}
+
+#parte4 {
+  display: flex;
+  justify-content: space-between;
+}
+
+#label-rate {
+  flex-direction: row;
 }
 
 #house {
@@ -77,9 +86,9 @@ main , #parte1 , #parte3 {
   width: 100px;
   height: 30px;
   border-radius: 5px;
-  padding-right: 30px;
   background-color: purple;
   text-align: center;
+  color: white;
 }
 
 #submit-btn {

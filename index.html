@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Trybewarts</title>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
@@ -68,33 +68,32 @@
                 />Fullstack
                 </div>
             </label>
-            
+        </div> 
             <label id="label-content"
                   >Qual conteúdo você está com mais vontade de aprender?
             </label>
-            <div id="parte3">
-                <div>
-                    <input type="checkbox" value="HoFs" />HoFs
-                </div>
-                <div>
-                    <input type="checkbox" value="Jest" />Jest
-                </div>
-                <div>
-                    <input type="checkbox" value="Promises" />Promises
-                </div>
-                <div>
-                    <input type="checkbox" value="React" />React
-                </div>
-                <div>
-                    <input type="checkbox" value="SQL" />SQL
-                </div>
-                <div>
-                    <input type="checkbox" value="Python" />Python
-                </div>
+        <div id="parte3">
+            <div>
+                <input type="checkbox" value="HoFs" />HoFs
+            </div>
+            <div>
+                <input type="checkbox" value="Jest" />Jest
+            </div>
+            <div>
+                <input type="checkbox" value="Promises" />Promises
+            </div>
+            <div>
+                <input type="checkbox" value="React" />React
+            </div>
+            <div>
+                <input type="checkbox" value="SQL" />SQL
+            </div>
+            <div>
+                <input type="checkbox" value="Python" />Python
             </div>
         </div>
         
-        <div id="conteudo-aprender">
+        <div id="parte4">
           <label>
             <p id="label-rate">Como você avalia a Trybewarts?</p>
           </label>
@@ -109,17 +108,19 @@
           <input type="radio" name="rate" value="9" />9
           <input type="radio" name="rate" value="10" />10
         </div>
-        <div>
+        <div id="parte5">
             <label class="textarea"
               >Deixe seu comentário:
               <textarea cols="30" rows="10" maxlength="500"></textarea>
               <div id="counter">500</div>
             </label>
         </div>
-        <label id="label-infos">
-          Você concorda com o uso das informações acima?
-          <input type="checkbox" id="agreement" />
-        </label>
+        <div id="parte6">
+            <label id="label-infos">
+                Você concorda com o uso das informações acima?
+                <input type="checkbox" id="agreement" />
+            </label>
+        </div>
         <button disabled type="submit" id="submit-btn">Enviar</button>
       </form>
 
