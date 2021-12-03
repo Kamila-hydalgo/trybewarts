@@ -22,10 +22,10 @@
     </header>
     <main>
       <form id="evaluation-form">
-        <label>
+        <h2>Formulário de Avaliação</h2>
+        <div id="parte1">
           <input type="text" id="input-name" placeholder="Nome" />
           <input type="text" id="input-lastname" placeholder="Sobrenome" />
-        </label>
         <label>
           <input type="email" id="input-email" placeholder="Email" />
           <select id="house">
@@ -35,15 +35,18 @@
             <option value="Pytherina" id="pytherina-house">Pytherina</option>
           </select>
         </label>
-        <label> 
-            <p id="label-family">Qual sua família?</p>
+        </div>
+        <label id="label-family"> 
+          <p>Qual sua família?</p>
+        <input type="radio" name="family" id="frontend" value="Frontend"/>Frontend
         </label>
-        <input type="radio" name="family" value="Frontend"/>Frontend
-        <input type="radio" name="family" value="Backend"/>Backend
-        <input type="radio" name="family" value="FullStack"/>FullStack
-
         <label>
-            <p id="label-content">Qual conteúdo você está com mais vontade de aprender?</p>
+        <input type="radio" name="family" id="backend" value="Backend"/>Backend
+        </label>
+        <label>
+        <input type="radio" name="family" id="fullstack" value="FullStack"/>Fullstack
+        </label>
+        <label id="label-content">Qual conteúdo você está com mais vontade de aprender?
         </label>
         <input type="checkbox" value="HoFs">HoFs
         <input type="checkbox" value="Jest">Jest
@@ -52,7 +55,7 @@
         <input type="checkbox" value="SQL">SQL
         <input type="checkbox" value="Python">Python
 
-        <div>
+        <div id="conteudo-aprender">
             <label>
                 <p id="label-rate">Como você avalia a Trybewarts?</p>
             </label>
