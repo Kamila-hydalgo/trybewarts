@@ -3,7 +3,6 @@ const email = document.querySelector('#email');
 const senha = document.querySelector('#senha');
 const botaoEntrar = document.querySelector('#botaoEntrar');
 function logIn() {
-  // event.preventDefault(); Comentei essa linha para testar e realmente não é necessária para atender os requisitos pedidos.
   if (email.value === 'tryber@teste.com' && senha.value === '123456') {
     alert('Olá, Tryber!');
   } else {
@@ -32,23 +31,36 @@ const textArea = document.querySelector('#textarea');
 textArea.addEventListener('keyup', () => {
   const counter = document.querySelector('#counter');
   const caracteresTextArea = textArea.value.length;
-  // console.log('Ola, ', caracteresTextArea);
   counter.innerText = 500 - caracteresTextArea;
 });
-// 1-Coloquei a variável 'counter' dentro da função, pois o lint estava reclamando que ela não estava sendo chamada e deu certo.
-// 2-Sem o value na linha 36 o console.log so me retornava o 'Ola', sem o número de caracteres.
-// 3-Coloquei o 'counter.innerText' para somente retornar o texto e não a tag toda.
-// 4-Como já tínhamos estipulado o valor máximo de 500 caracteres na tag pela propriedade 'maxlength', não precisamos fazer esse prevant default. Mas o resto do raciocínio era esse mesmo que vc colocou.
-// 5-Usando o 'keypress', não sei pq quando apagamos algo na text area o contador não ia aumentando os caracteres e não passava no teste. Testei o 'keyup' e deu certo.
-
-// alteração para keypress - evento ocorre quando a tecla retorna à posição original no teclado (i.e. quando você solta a mesma).
-// const maximoCaracteres = 500;
-// const caracteresTextArea = textArea.length; // tirei o value, pois estava com erro e como nao pegamos o valor em si e somente o tamanho (caracteres) acredito que deveria ser só o lenght (nao deu erro com length kkk)
-// const resultadoContador = maximoCaracteres - caracteresTextarea; - teriamos que colocar em outra funçao ou na mesma para mostrar na tela?
-// contador.display(e);
-//   if (caracteresTextArea >= maximoCaracteres) {
-//     e.preventDefault();
-//   }
 
 // Requisito 21
 // Adicionei as classes 'subjects' nos checkboxs.
+const form = document.querySelector('#evaluation-form');
+const nameNewForm = document.querySelector('#input-name');
+const surname = document.querySelector('#input-lastname');
+const emailForm = document.querySelector('#input-email');
+const house = document.querySelector('#house');
+const family = document.querySelector('.family');
+const subjects = document.querySelector('.subject');
+const rate = document.querySelector('.rate');
+const observacoes = document.querySelector('#textarea');
+
+function replaceForm() {
+  const nomeCompleto = document.querySelector('#nomeCompleto');
+  nomeCompleto.innerText = `Nome: ${nameNewForm.value} ${surname.value}`;
+  const newEmail = document.querySelector('#email');
+  newEmail.innerText = `Email: ${emailForm.value}`;
+  const casa = document.querySelector('#casa');
+  casa.innerText = `Casa: ${house.value}`;
+  const familia = document.querySelector('#familia');
+  familia.innerText = `Família: ${family.value}`;
+}
+
+submitButton.addEventListener('click', (event) => {
+  event.preventDefault();
+  // FUNÇÃO DE CHECAGEM DOS CHECKBOX DAS MATERIAS
+  // FUNÇÃO REPLACE
+  // FUNÇÃO DE APAGAR FORM
+  // ATRIBUIR ID
+});
