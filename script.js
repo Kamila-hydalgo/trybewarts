@@ -49,3 +49,6 @@ textArea.addEventListener('keyup', () => {
 //   if (caracteresTextArea >= maximoCaracteres) {
 //     e.preventDefault();
 //   }
+
+// Requisito 21
+// Adicionei as classes 'subjects' nos checkboxs.
