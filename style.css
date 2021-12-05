@@ -89,37 +89,6 @@ main , #parte1 , #parte3 , #parte4 {
   width: 200px;
 }
 
-#div-lado-a-lado {
-  display: flex;
-  margin-top: 10px;
-  margin-bottom: 10px;
-  padding-top: 10px;
-}
-
-#parte2 {
-  width: 30%;
-  flex-flow: column wrap;
-}
-
-#parte3 {
-  flex-flow: row wrap;
-}
-
-#parte3 div {
-  flex: 33%;
-  line-height: 20px;
-}
-
-#parte4 {
-  justify-content: space-between;
-  padding-bottom: 10px;
-  margin-right: 5px;
-}
-
-#label-rate {
-  flex-direction: row;
-}
-
 
 #email {
   width: 100px;
@@ -154,6 +123,37 @@ main , #parte1 , #parte3 , #parte4 {
   font-family: Inknut Antiqua, sans-serif;
   font-weight: 700;
   font-size: 0.6rem;
+}
+
+#div-lado-a-lado {
+  display: flex;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding-top: 10px;
+}
+
+#parte2 {
+  width: 30%;
+  flex-flow: column wrap;
+}
+
+#parte3 {
+  flex-flow: row wrap;
+}
+
+#parte3 div {
+  flex: 33%;
+  line-height: 20px;
+}
+
+#parte4 {
+  justify-content: space-between;
+  padding-bottom: 10px;
+  margin-right: 5px;
+}
+
+#label-rate {
+  flex-direction: row;
 }
 
 #textarea {
