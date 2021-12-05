@@ -41,10 +41,34 @@ h2 {
   flex-direction: column;
   border: solid black 1px;
   margin: 30px;
-
 }
 
-main , #parte1 , #parte3 {
+#input-name {
+  font-family: Inknut Antiqua, sans-serif;
+  font-weight: 300;
+  font-size: 0.8rem;
+}
+
+#input-lastname {
+  font-family: Inknut Antiqua, sans-serif;
+  font-weight: 300;
+  font-size: 0.8rem;
+}
+
+#input-email {
+  font-family: Inknut Antiqua, sans-serif;
+  font-weight: 300;
+  font-size: 0.8rem;
+}
+
+#house {
+  width: 210px;
+  font-family: Inknut Antiqua, sans-serif;
+  font-weight: 300;
+  font-size: 0.8rem;
+}
+
+main , #parte1 , #parte3 , #parte4 {
   display: flex;
 }
 
@@ -87,7 +111,6 @@ main , #parte1 , #parte3 {
 }
 
 #parte4 {
-  display: flex;
   justify-content: space-between;
   padding-bottom: 10px;
   margin-right: 5px;
@@ -97,9 +120,6 @@ main , #parte1 , #parte3 {
   flex-direction: row;
 }
 
-#house {
-  width: 210px;
-}
 
 #email {
   width: 100px;
