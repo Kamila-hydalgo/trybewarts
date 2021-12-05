@@ -127,6 +127,9 @@ main , #parte1 , #parte3 , #parte4 {
   border-radius: 5px;
   padding-right: 30px;
   margin-right: 30px;
+  font-family: Inknut Antiqua, sans-serif;
+  font-weight: 300;
+  font-size: 0.6rem;
 }
 
 #senha {
@@ -135,6 +138,9 @@ main , #parte1 , #parte3 , #parte4 {
   border-radius: 5px;
   padding-right: 30px;
   margin-right: 20px;
+  font-family: Inknut Antiqua, sans-serif;
+  font-weight: 300;
+  font-size: 0.6rem;
 }
 
 #botaoEntrar {
@@ -145,6 +151,9 @@ main , #parte1 , #parte3 , #parte4 {
   background-color: purple;
   text-align: center;
   color: white;
+  font-family: Inknut Antiqua, sans-serif;
+  font-weight: 700;
+  font-size: 0.6rem;
 }
 
 #textarea {
