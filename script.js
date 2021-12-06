@@ -46,17 +46,26 @@ const house = document.querySelector('#house');
 const subjects = document.querySelector('.subject');
 // const rate = document.querySelector('.rate');
 const observacoes = document.querySelector('#textarea');
-
 const nomeCompleto = document.querySelector('#nomeCompleto');
-const newEmail = document.querySelector('#email');
+const newEmail = document.querySelector('#emailFormNovo'); // alterei o nome do id pq aparentemente estava pegando algum outro 'email' do html
 const casa = document.querySelector('#casa');
 const familia = document.querySelector('#familia');
 const avaliacao = document.querySelector('#avaliacao');
 const comments = document.querySelector('#comments');
 
+// FUNÇÃO DE CHECAGEM DOS CHECKBOX DAS MATERIAS
+function checkbox() {
+
+}
+
+// FUNÇÃO DE APAGAR FORM
+function removeForm() {
+  form.remove();
+}
+
 function replaceForm() {
-  const getFamily = document.querySelector('input[name="family"]:checked').value;
-  const getRate = document.querySelector('input[name="rate"]:checked').value;
+  const getFamily = document.querySelector('input[name="family"]:checked'); // funciona sem o .value
+  const getRate = document.querySelector('input[name="rate"]:checked'); // funciona sem o .value
   nomeCompleto.innerText = `Nome: ${nameNewForm.value} ${surname.value}`;
   // nomeCompleto.appendChild(nomeCompleto);
   newEmail.innerText = `Email: ${emailForm.value}`;
@@ -74,5 +83,7 @@ submitButton.addEventListener('click', (event) => {
   // FUNÇÃO REPLACE
   replaceForm();
   // FUNÇÃO DE APAGAR FORM
+  removeForm();
   // ATRIBUIR ID
+  document.querySelector('.new-form').id = 'evaluation-form'; // acessa o formulario 'novo' e muda a id para evaluation-form
 });
