@@ -54,6 +54,9 @@ const avaliacao = document.querySelector('#avaliacao');
 const comments = document.querySelector('#comments');
 
 // FUNÇÃO DE CHECAGEM DOS CHECKBOX DAS MATERIAS
+// criar uma array do que for subjects
+// percorrer a array para validar se estiver check ou nao
+// colocar na array o que estiver com check
 function checkbox() {
 
 }
