@@ -40,27 +40,39 @@ const form = document.querySelector('#evaluation-form');
 const nameNewForm = document.querySelector('#input-name');
 const surname = document.querySelector('#input-lastname');
 const emailForm = document.querySelector('#input-email');
+console.log(emailForm);
 const house = document.querySelector('#house');
-const family = document.querySelector('.family');
+// const family = document.querySelector('.family');
 const subjects = document.querySelector('.subject');
-const rate = document.querySelector('.rate');
+// const rate = document.querySelector('.rate');
 const observacoes = document.querySelector('#textarea');
 
+const nomeCompleto = document.querySelector('#nomeCompleto');
+const newEmail = document.querySelector('#email');
+const casa = document.querySelector('#casa');
+const familia = document.querySelector('#familia');
+const avaliacao = document.querySelector('#avaliacao');
+const comments = document.querySelector('#comments');
+
 function replaceForm() {
-  const nomeCompleto = document.querySelector('#nomeCompleto');
+  const getFamily = document.querySelector('input[name="family"]:checked').value;
+  const getRate = document.querySelector('input[name="rate"]:checked').value;
   nomeCompleto.innerText = `Nome: ${nameNewForm.value} ${surname.value}`;
-  const newEmail = document.querySelector('#email');
+  // nomeCompleto.appendChild(nomeCompleto);
   newEmail.innerText = `Email: ${emailForm.value}`;
-  const casa = document.querySelector('#casa');
+  // newEmail.appendChild(newEmail);
   casa.innerText = `Casa: ${house.value}`;
-  const familia = document.querySelector('#familia');
-  familia.innerText = `Família: ${family.value}`;
+  // casa.appendChild(casa);
+  familia.innerText = `Família: ${getFamily.value}`;
+  avaliacao.innerText = `Avaliação: ${getRate.value}`;
+  comments.innerText = `Observações: ${observacoes.value}`;
 }
 
 submitButton.addEventListener('click', (event) => {
   event.preventDefault();
   // FUNÇÃO DE CHECAGEM DOS CHECKBOX DAS MATERIAS
   // FUNÇÃO REPLACE
+  replaceForm();
   // FUNÇÃO DE APAGAR FORM
   // ATRIBUIR ID
 });
