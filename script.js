@@ -35,21 +35,18 @@ textArea.addEventListener('keyup', () => {
 });
 
 // Requisito 21
-// Adicionei as classes 'subjects' nos checkboxs.
 const form = document.querySelector('#evaluation-form');
 const nameNewForm = document.querySelector('#input-name');
 const surname = document.querySelector('#input-lastname');
 const emailForm = document.querySelector('#input-email');
-console.log(emailForm);
 const house = document.querySelector('#house');
-// const family = document.querySelector('.family');
-const subjects = document.querySelector('.subject');
-// const rate = document.querySelector('.rate');
+const content = document.querySelectorAll('.subject2');
 const observacoes = document.querySelector('#textarea');
 const nomeCompleto = document.querySelector('#nomeCompleto');
-const newEmail = document.querySelector('#emailFormNovo'); // alterei o nome do id pq aparentemente estava pegando algum outro 'email' do html
+const newEmail = document.querySelector('#emailFormNovo');
 const casa = document.querySelector('#casa');
 const familia = document.querySelector('#familia');
+const newSubject = document.querySelector('#materias');
 const avaliacao = document.querySelector('#avaliacao');
 const comments = document.querySelector('#comments');
 
@@ -57,8 +54,13 @@ const comments = document.querySelector('#comments');
 // criar uma array do que for subjects
 // percorrer a array para validar se estiver check ou nao
 // colocar na array o que estiver com check
-function checkbox() {
-
+const subjects = [];
+function checkSubject() {
+  for (let index = 0; index < content.length; index += 1) {
+    if (content[index].checked) {
+      subjects.push(`${content[index].value}`);
+    }
+  }
 }
 
 // FUNÇÃO DE APAGAR FORM
@@ -67,8 +69,8 @@ function removeForm() {
 }
 
 function replaceForm() {
-  const getFamily = document.querySelector('input[name="family"]:checked'); // funciona sem o .value
-  const getRate = document.querySelector('input[name="rate"]:checked'); // funciona sem o .value
+  const getFamily = document.querySelector('input[name="family"]:checked');
+  const getRate = document.querySelector('input[name="rate"]:checked');
   nomeCompleto.innerText = `Nome: ${nameNewForm.value} ${surname.value}`;
   // nomeCompleto.appendChild(nomeCompleto);
   newEmail.innerText = `Email: ${emailForm.value}`;
@@ -76,6 +78,7 @@ function replaceForm() {
   casa.innerText = `Casa: ${house.value}`;
   // casa.appendChild(casa);
   familia.innerText = `Família: ${getFamily.value}`;
+  newSubject.innerText = `Matérias: ${subjects.join(', ')}`;
   avaliacao.innerText = `Avaliação: ${getRate.value}`;
   comments.innerText = `Observações: ${observacoes.value}`;
 }
@@ -83,6 +86,7 @@ function replaceForm() {
 submitButton.addEventListener('click', (event) => {
   event.preventDefault();
   // FUNÇÃO DE CHECAGEM DOS CHECKBOX DAS MATERIAS
+  checkSubject();
   // FUNÇÃO REPLACE
   replaceForm();
   // FUNÇÃO DE APAGAR FORM
