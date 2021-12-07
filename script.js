@@ -35,6 +35,7 @@ textArea.addEventListener('keyup', () => {
 });
 
 // Requisito 21
+// Referência: Agradecimento ao Colega Lucas Pimentel pelo auxílio na elaboração da sequência do desenvolvimento desse requisito.
 const form = document.querySelector('#evaluation-form');
 const nameNewForm = document.querySelector('#input-name');
 const surname = document.querySelector('#input-lastname');
@@ -42,6 +43,7 @@ const emailForm = document.querySelector('#input-email');
 const house = document.querySelector('#house');
 const content = document.querySelectorAll('.subject2');
 const observacoes = document.querySelector('#textarea');
+
 const nomeCompleto = document.querySelector('#nomeCompleto');
 const newEmail = document.querySelector('#emailFormNovo');
 const casa = document.querySelector('#casa');
@@ -50,10 +52,7 @@ const newSubject = document.querySelector('#materias');
 const avaliacao = document.querySelector('#avaliacao');
 const comments = document.querySelector('#comments');
 
-// FUNÇÃO DE CHECAGEM DOS CHECKBOX DAS MATERIAS
-// criar uma array do que for subjects
-// percorrer a array para validar se estiver check ou nao
-// colocar na array o que estiver com check
+// FUNÇÃO DE CHECAGEM DOS CHECKBOX DAS MATÉRIAS
 const subjects = [];
 function checkSubject() {
   for (let index = 0; index < content.length; index += 1) {
@@ -63,7 +62,6 @@ function checkSubject() {
   }
 }
 
-// FUNÇÃO DE APAGAR FORM
 function removeForm() {
   form.remove();
 }
@@ -72,11 +70,8 @@ function replaceForm() {
   const getFamily = document.querySelector('input[name="family"]:checked');
   const getRate = document.querySelector('input[name="rate"]:checked');
   nomeCompleto.innerText = `Nome: ${nameNewForm.value} ${surname.value}`;
-  // nomeCompleto.appendChild(nomeCompleto);
   newEmail.innerText = `Email: ${emailForm.value}`;
-  // newEmail.appendChild(newEmail);
   casa.innerText = `Casa: ${house.value}`;
-  // casa.appendChild(casa);
   familia.innerText = `Família: ${getFamily.value}`;
   newSubject.innerText = `Matérias: ${subjects.join(', ')}`;
   avaliacao.innerText = `Avaliação: ${getRate.value}`;
@@ -85,12 +80,8 @@ function replaceForm() {
 
 submitButton.addEventListener('click', (event) => {
   event.preventDefault();
-  // FUNÇÃO DE CHECAGEM DOS CHECKBOX DAS MATERIAS
   checkSubject();
-  // FUNÇÃO REPLACE
   replaceForm();
-  // FUNÇÃO DE APAGAR FORM
   removeForm();
-  // ATRIBUIR ID
-  document.querySelector('.new-form').id = 'evaluation-form'; // acessa o formulario 'novo' e muda a id para evaluation-form
+  document.querySelector('.new-form').id = 'evaluation-form';
 });
